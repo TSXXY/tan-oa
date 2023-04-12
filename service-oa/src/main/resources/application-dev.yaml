@@ -12,7 +12,8 @@ spring:
     password: '!Tanshan0411'
   jackson:
     date-format: YYYY-MM-dd HH:mm:ss
- # 不加上会导致swagger-ui无法访问
+    time-zone: GMT+8
+  # 不加上会导致swagger-ui无法访问
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
