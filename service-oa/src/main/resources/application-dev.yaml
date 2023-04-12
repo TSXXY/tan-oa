@@ -1,0 +1,14 @@
+server:
+  port: 8888
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gz-cynosdbmysql-grp-n6hdaj79.sql.tencentcdb.com:23619/tan_oa?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: tan
+    password: '!Tanshan0411'
+  jackson:
+    date-format: YYYY-MM-dd HH:mm:ss
