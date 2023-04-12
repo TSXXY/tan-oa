@@ -29,6 +29,14 @@ public class Result<T> {
         return build(null, ResultCodeEnum.SUCCESS);
     }
 
+
+    public static <T> Result<T> ok(String message){
+        Result<T> result = new Result<>();
+        result.setCode(ResultCodeEnum.SUCCESS.getCode());
+        result.setMessage(message);
+        return result;
+    }
+
     //成功有数据
     public static <T> Result<T> ok(T data) {
         return build(data, ResultCodeEnum.SUCCESS);
