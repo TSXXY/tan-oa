@@ -1,12 +1,13 @@
 package com.tan.controller;
 
 import com.tan.result.Result;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
-@ApiOperation("后台登录管理")
+@Api("后台登录管理")
 @RestController
 @CrossOrigin
 @RequestMapping("/admin/system/index")
