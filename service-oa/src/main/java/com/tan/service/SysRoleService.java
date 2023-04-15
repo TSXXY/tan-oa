@@ -3,6 +3,8 @@ package com.tan.service;
 import com.tan.model.system.SysRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.Map;
+
 /**
 * @author Tan
 * @description 针对表【sys_role(角色)】的数据库操作Service
@@ -10,4 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface SysRoleService extends IService<SysRole> {
 
+    Map<String, Object> findRoleByAdminId(Long userId);
 }

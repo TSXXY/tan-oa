@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tan.model.system.SysRole;
 import com.tan.service.SysRoleService;
 import com.tan.mapper.SysRoleMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 /**
 * @author Tan
@@ -15,6 +18,18 @@ import org.springframework.stereotype.Service;
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole>
     implements SysRoleService{
 
+    private SysRoleMapper sysRoleMapper;
+
+    @Autowired
+    public SysRoleServiceImpl(SysRoleMapper sysRoleMapper) {
+        this.sysRoleMapper = sysRoleMapper;
+    }
+
+    @Override
+    public Map<String, Object> findRoleByAdminId(Long userId) {
+
+        return null;
+    }
 }
 
 

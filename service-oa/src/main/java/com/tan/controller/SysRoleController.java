@@ -14,6 +14,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Api(tags = "角色管理")
 @RestController
@@ -91,5 +92,12 @@ public class SysRoleController {
             return Result.ok("删除成功");
         }
         return Result.error();
+    }
+
+    @ApiOperation("根据用户获取角色数据")
+    @GetMapping("/toAssign/{userId}")
+    public Result toAssign(@PathVariable Long userId) {
+        Map<String,Object> roleMap  = sysRoleService.findRoleByAdminId(userId);
+        return null;
     }
 }

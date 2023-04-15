@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
-@Api("后台登录管理")
+@Api(tags = "后台登录管理")
 @RestController
 @CrossOrigin
 @RequestMapping("/admin/system/index")

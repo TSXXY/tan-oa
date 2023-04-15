@@ -2,6 +2,7 @@ package com.tan.mapper;
 
 import com.tan.model.system.SysRoleMenu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 * @author Tan
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2023-04-12 13:47:43
 * @Entity com.tan.domain.SysRoleMenu
 */
+@Mapper
 public interface SysRoleMenuMapper extends BaseMapper<SysRoleMenu> {
 
 }
