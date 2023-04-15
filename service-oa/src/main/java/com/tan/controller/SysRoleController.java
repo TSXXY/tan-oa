@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tan.model.system.SysRole;
 import com.tan.result.Result;
 import com.tan.service.SysRoleService;
+import com.tan.vo.system.AssginRoleVo;
 import com.tan.vo.system.SysRoleQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -98,6 +99,16 @@ public class SysRoleController {
     @GetMapping("/toAssign/{userId}")
     public Result toAssign(@PathVariable Long userId) {
         Map<String,Object> roleMap  = sysRoleService.findRoleByAdminId(userId);
-        return null;
+        return Result.ok(roleMap);
+    }
+
+    @ApiOperation("根据用户分配角色")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestBody AssginRoleVo assginRoleVo){
+       boolean b =  sysRoleService.doAssign(assginRoleVo);
+        if (b) {
+            return Result.ok();
+        }
+        return Result.error();
     }
 }

@@ -2,6 +2,7 @@ package com.tan.service;
 
 import com.tan.model.system.SysRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tan.vo.system.AssginRoleVo;
 
 import java.util.Map;
 
@@ -13,4 +14,6 @@ import java.util.Map;
 public interface SysRoleService extends IService<SysRole> {
 
     Map<String, Object> findRoleByAdminId(Long userId);
+
+    boolean doAssign(AssginRoleVo assginRoleVo);
 }
